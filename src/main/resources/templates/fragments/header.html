@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="header">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <style>
+        a{
+            text-decoration-line: none;
+            color: black;
+        }
+
+        .userInfo{
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<div>
+    <!-- 로그인, 회원 정보 관련  -->
+    <div>
+        <!-- 로그인 시  -->
+        <div class="userInfo">
+            <a>(회원아이디)</a>
+            <span>님 반갑습니다.</span>
+            <button type="button">회원 프로필</button>
+
+            <form onsubmit="return confirm('로그아웃 하시겠습니까?');">
+                <button type="submit">
+                    로그아웃
+                </button>
+            </form>
+        </div><!-- /로그인, 회원 정보 관련  -->
+
+        <!-- 로그아웃 상태  -->
+        <div class="userInfo">
+            <button type="button">
+                회원가입
+            </button>
+            <button type="button">
+                로그인
+            </button>
+        </div>
+    </div><!-- /로그아웃 상태  -->
+</div>
+</html>
